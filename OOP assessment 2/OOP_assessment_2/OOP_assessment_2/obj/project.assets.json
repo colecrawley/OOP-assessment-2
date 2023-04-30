@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/colecrawley/Documents/OOP assessment 2/OOP_assessment_2/OOP_assessment_2/OOP_assessment_2.csproj",
+      "projectUniqueName": "/Users/colecrawley/Projects/OOP-assessment-2/OOP assessment 2/OOP_assessment_2/OOP_assessment_2/OOP_assessment_2.csproj",
       "projectName": "OOP_assessment_2",
-      "projectPath": "/Users/colecrawley/Documents/OOP assessment 2/OOP_assessment_2/OOP_assessment_2/OOP_assessment_2.csproj",
+      "projectPath": "/Users/colecrawley/Projects/OOP-assessment-2/OOP assessment 2/OOP_assessment_2/OOP_assessment_2/OOP_assessment_2.csproj",
       "packagesPath": "/Users/colecrawley/.nuget/packages/",
-      "outputPath": "/Users/colecrawley/Documents/OOP assessment 2/OOP_assessment_2/OOP_assessment_2/obj/",
+      "outputPath": "/Users/colecrawley/Projects/OOP-assessment-2/OOP assessment 2/OOP_assessment_2/OOP_assessment_2/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/colecrawley/.nuget/NuGet/NuGet.Config"
