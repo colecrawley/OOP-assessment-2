@@ -3,7 +3,7 @@ namespace OOP_assessment_2
 {
 	public class Operator
 	{
-        public static void numberoperator()
+        public static string numberoperator()
         {
             int desired_operand = 0; //rename this
 
@@ -17,29 +17,32 @@ namespace OOP_assessment_2
                     if (desired_operand == 1)
                     {
                         string add_operand = desired_operand.ToString();
-                        add_operand = "+";
-                        Console.Write("\t" + add_operand + "\t");
+                        //add_operand = "+";
+                        Console.Write("\t" + "+" + "\t");
+                        return "+";
                     }
                     else if (desired_operand == 2)
                     {
                         string minus_operand = desired_operand.ToString();
-                        minus_operand = "-";
-                        Console.Write("\t" + minus_operand + "\t");
+                       // minus_operand = "-";
+                        Console.Write("\t" + "-" + "\t");
+                        return "-";
                     }
                     else if (desired_operand == 3)
                     {
                         string mul_operand = desired_operand.ToString();
-                        mul_operand = "*";
-                        Console.Write("\t" + mul_operand + "\t");
+                        Console.Write("\t" + "*" + "\t");
+                        return "*";
                     }
                     else if (desired_operand == 4)
                     {
                         string div_operand = desired_operand.ToString();
-                        div_operand = "/";
-                        Console.Write("\t" + div_operand + "\t");
+                        Console.Write("\t" + "/" + "\t");
+                        return "/";
                     }
                 }
             }
+            return null;
         }
 	}
 }

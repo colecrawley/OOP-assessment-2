@@ -26,6 +26,7 @@ namespace OOP_assessment_2
 					Pack deck = new Pack(); // initialize the pack
 
 					DealCards.deal3cards();
+
                 }
 
 				else if (user_answer == "3")
@@ -39,6 +40,7 @@ namespace OOP_assessment_2
 
 				else if (user_answer == "4")
 				{
+					Console.WriteLine("Thank you, come again!");
 					flag = 0;
 					break;
 				}
