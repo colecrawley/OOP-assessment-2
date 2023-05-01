@@ -1,10 +1,11 @@
 ﻿using System;
 namespace OOP_assessment_2
 {
-	public class DealCards
+	public class DealCards : Pack
 	{
 		public static void deal3cards()
 		{
+            Pack.ShuffleCardPack(1);
 
             //show the equation
             int opnum_1 = Number.numbervalue();
@@ -16,11 +17,12 @@ namespace OOP_assessment_2
 
             int opnum_2 = Number.numbervalue();
             
-            int answer = equation.Compute2(opsign, opnum_1, opnum_2); // answer
+            decimal answer = Decimal.Round(equation.Compute2(opsign, opnum_1, opnum_2),1); // answer
+            //Console.WriteLine("\n" + answer);
 
             Console.WriteLine("\nWhat is the answer?\n");
             string user_ans = Console.ReadLine();
-            int ans = int.Parse(user_ans);
+            decimal ans = decimal.Parse(user_ans);
 
             if (ans == answer)
             {
@@ -36,15 +38,29 @@ namespace OOP_assessment_2
 
 		public static void deal5cards()
 		{
-            Number.numbervalue();
+            int opnum_1 = Number.numbervalue();
 
-            Operator.numberoperator();
+            string opsign_1 = Operator.numberoperator();
 
-            Number.numbervalue();
+            int opnum_2 = Number.numbervalue();
 
-            Operator.numberoperator();
+            string opsign_2 = Operator.numberoperator();
 
-            Number.numbervalue();
+            int opnum_3 = Number.numbervalue();
+
+            decimal answer = Decimal.Round(equation.Compute3(opsign_1, opsign_2, opnum_1, opnum_2, opnum_3),1); // answer
+            Console.WriteLine("\nWhat is the answer?\n");
+            string user_ans = Console.ReadLine();
+            decimal ans = decimal.Parse(user_ans);
+
+            if (ans == answer)
+            {
+                Console.WriteLine("\nYou got the right answer!");
+            }
+            else
+            {
+                Console.WriteLine("\nIncorrect answer try again!");
+            }
         }
 
 	}
