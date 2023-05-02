@@ -48,6 +48,9 @@ namespace OOP_assessment_2
                     else
                     {
                         Console.WriteLine("\nIncorrect answer try again!");
+                        //if incorrect show real answer and move on
+
+                        Console.WriteLine("This is the answer to the question: " + answer);
                     }
                 }
 
@@ -71,6 +74,8 @@ namespace OOP_assessment_2
                     else
                     {
                         Console.WriteLine("\nIncorrect answer try again!");
+
+                        Console.WriteLine("This is the answer to the question: " + answer);
                     }
                 }
 
