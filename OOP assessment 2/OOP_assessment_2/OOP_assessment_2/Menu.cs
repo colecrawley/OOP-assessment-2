@@ -1,16 +1,24 @@
 ﻿using System;
+using static System.Formats.Asn1.AsnWriter;
+
 namespace OOP_assessment_2
 {
 	public class Menu
 	{
-		public static void Showmenu()
+		
+        public static void Showmenu()
 		{
+			int Highscore = 0;
 			int flag = 1;
 
-			while (flag == 1)
+            Console.WriteLine("What is your player name\n");
+            string name = Console.ReadLine();
+
+            while (flag == 1)
 			{
                 // Start of the menu
-                Console.WriteLine("\n----------What would you like to do?----------\n1. Instructions\n2. Operate on two numbers\n3. Operate on three numbers\n4. Quit\n");
+
+                Console.WriteLine("\n----------What would you like to do?----------\n1. Instructions\n2. Operate on two numbers\n3. Operate on three numbers\n4. Leaderboard\n5. Quit");
 
                 string user_answer = Console.ReadLine();
 
@@ -20,30 +28,79 @@ namespace OOP_assessment_2
 
 				}
 
-				else if (user_answer == "2")
+				else if (user_answer == "2") //operate on two different numbers
 				{
 
 					Pack deck = new Pack(); // initialize the pack
 
-					DealCards.deal3cards();
+                    decimal answer = DealCards.deal3cards();
 
+                    Console.WriteLine("\nWhat is the answer?\n");
+                    string user_ans = Console.ReadLine();
+                    decimal ans = decimal.Parse(user_ans);
+
+                    if (ans == answer)
+                    {
+                        Console.WriteLine("\nYou got the right answer!\n");
+						Highscore++;
+                        Console.WriteLine("Here's your score: " + Highscore);
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nIncorrect answer try again!");
+                    }
                 }
 
-				else if (user_answer == "3")
+				else if (user_answer == "3") //operate on three different numbers
 				{
-					//Console.WriteLine("Running choice 3");
 
 					Pack deck = new Pack();
 
-					DealCards.deal5cards();
+					decimal answer = DealCards.deal5cards();
+
+                    Console.WriteLine("\nWhat is the answer?\n");
+                    string user_ans = Console.ReadLine();
+                    decimal ans = decimal.Parse(user_ans);
+
+                    if (ans == answer)
+                    {
+                        Console.WriteLine("\nYou got the right answer!\n");
+                        Highscore++;
+                        Console.WriteLine("Here's your score: " + Highscore);
+                    }
+                    else
+                    {
+                        Console.WriteLine("\nIncorrect answer try again!");
+                    }
+                }
+
+				else if (user_answer == "4") //leaderboard
+				{
+
+					//leaderboard/text file
+
+
+                    List<Leaderboard> scores = Leaderboard.Readleaderboard("leaderboard.rtf"); //read the leaderboard
+
+					foreach (Leaderboard score in scores)
+					{
+						Console.WriteLine("Player: " + score.Username);
+						Console.WriteLine("Score: " + score.Scorenum);
+						Console.WriteLine();
+					}
 				}
 
-				else if (user_answer == "4")
+				else if (user_answer == "5") //quit
 				{
-					Console.WriteLine("Thank you, come again!");
-					flag = 0;
-					break;
-				}
+
+                    Newplayer.newplayer(name, Highscore); //store player data when they quit
+
+                    Console.WriteLine("Thank you, come again!");
+                    Console.ReadKey();
+                    flag = 0;
+                    break;
+
+                }
 
 				else
 				{
