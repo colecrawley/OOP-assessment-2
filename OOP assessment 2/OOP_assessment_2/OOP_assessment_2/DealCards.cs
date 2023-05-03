@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace OOP_assessment_2
 {
-	public class DealCards : Menu
+	public class DealCards
 	{
 
         public static decimal deal3cards()

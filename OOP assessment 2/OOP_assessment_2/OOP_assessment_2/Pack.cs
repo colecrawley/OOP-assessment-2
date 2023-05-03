@@ -103,12 +103,15 @@ namespace OOP_assessment_2
             dealt_cards.Clear();
 
             ShuffleCardPack(1);
-
+            int a = 1;
+            int b = 1;
             for (int i = 1; i <= amount; i++) // draws the amount of cards specified
             {
+
                 Card Stack = pack[5];
                 pack.RemoveAt(5);
                 dealt_cards.Add(Stack);
+
             }
             dealt_cards.AddRange(dealt_cards);
             return dealt_cards;
