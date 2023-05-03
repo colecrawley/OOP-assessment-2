@@ -1,9 +1,19 @@
 ﻿using System;
 namespace OOP_assessment_2
 {
-	public class Pack
+	public class Pack : IScoring
 	{
+        private int score_;
 
+        public int Getscore()
+        {
+            return score_;
+        }
+
+        public void updatescore()
+        {
+            score_++;
+        }
 
         public static List<Card> pack = new List<Card>();
         public static List<Card> split_deck = new List<Card>();

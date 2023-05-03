@@ -5,7 +5,17 @@ namespace OOP_assessment_2
 {
 	public class Menu
 	{
-		
+
+        private readonly IScoring scoring_;
+
+        public Menu(IScoring scoring)
+        {
+            scoring_ = scoring;
+        }
+
+        private static IScoring scoring = new Pack();
+        Menu menu = new Menu(scoring);
+
         public static void Showmenu()
 		{
 			int Highscore = 0;
@@ -32,6 +42,8 @@ namespace OOP_assessment_2
                 {
 
                     Pack deck = new Pack(); // initialize the pack
+                    //IScoring scoring = new Pack();
+                    //Menu menu = new Menu(scoring);
 
                     decimal answer = DealCards.deal3cards();
 
@@ -42,8 +54,9 @@ namespace OOP_assessment_2
                     if (ans == answer)
                     {
                         Console.WriteLine("\nYou got the right answer!\n");
-                        Highscore++;
-                        Console.WriteLine("Here's your score: " , Highscore);
+                        //Highscore++;
+                        scoring.updatescore();
+                        Console.WriteLine("Here's your score: " + scoring.Getscore());
                     }
                     else
                     {
@@ -68,8 +81,9 @@ namespace OOP_assessment_2
                     if (ans == answer)
                     {
                         Console.WriteLine("\nYou got the right answer!\n");
-                        Highscore++;
-                        Console.WriteLine("Here's your score: " + Highscore);
+                        //Highscore++;
+                        scoring.updatescore();
+                        Console.WriteLine("Here's your score: " + scoring.Getscore());
                     }
                     else
                     {
@@ -124,7 +138,7 @@ namespace OOP_assessment_2
                 }
                 else if (user_answer == "6") // quit
                 {
-                    Newplayer.newplayer(name, Highscore); //store player data when they quit
+                    Newplayer.newplayer(name, scoring.Getscore()); //store player data when they quit
 
                     Console.WriteLine("Thank you, come again!");
                     Console.ReadKey();
