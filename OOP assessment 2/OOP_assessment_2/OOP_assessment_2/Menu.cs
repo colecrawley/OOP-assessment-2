@@ -43,13 +43,13 @@ namespace OOP_assessment_2
                     {
                         Console.WriteLine("\nYou got the right answer!\n");
                         Highscore++;
-                        Console.WriteLine("Here's your score: " + Highscore);
+                        Console.WriteLine("Here's your score: " , Highscore);
                     }
                     else
                     {
                         Console.WriteLine("\nIncorrect answer try again!");
                         //if incorrect show real answer and move on
-
+                        
                         Console.WriteLine("This is the answer to the question: " + answer);
                     }
                 }
@@ -104,16 +104,22 @@ namespace OOP_assessment_2
                     Console.WriteLine("Which would you like to test?\n1. Test 2 numbers\n2. Test 3 numbers");
                     string test = Console.ReadLine();
 
-                    Test newtest = new Test(); //inehritance from Test
+                    Run runningtest;
 
                     if (test == "1")
                     {
-                        newtest.trialsfor2();
+                        runningtest = new trial2numbers();
                     }
                     else if (test == "2")
                     {
-                        newtest.trialsfor3();
+                        runningtest = new trial3numbers();
                     }
+                    else
+                    {
+                        Console.WriteLine("Invalid choice!");
+                        return;
+                    }
+                    runningtest.runtest();
 
                 }
                 else if (user_answer == "6") // quit

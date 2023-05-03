@@ -19,6 +19,8 @@ namespace OOP_assessment_2
 		{
             Console.WriteLine("----------Testing the deal 5 cards maths to output correctly----------\n");
 
+            DealCards.deal5cards();
+
             decimal answer_2 = DealCards.deal5cards();
 
             Console.WriteLine("\tThis is the answer: \t" + answer_2);
