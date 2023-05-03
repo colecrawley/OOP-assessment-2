@@ -3,7 +3,7 @@ namespace OOP_assessment_2
 {
 	public class Pack : IScoring
 	{
-        private int score_;
+        protected int score_; //protected modifier
 
         public int Getscore()
         {
