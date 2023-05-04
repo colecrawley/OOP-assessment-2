@@ -33,64 +33,100 @@ namespace OOP_assessment_2
 		{
 			if (sign_1 == "+" && sign_2 == "-")
 			{
-				return (int)(number_1 + number_2 - number_3);
+				decimal number_4 = number_1 + number_2;
+				decimal result = number_4 - number_3;
+				return result;
+				//return (int)(number_1 + number_2 - number_3);
 			}
 			else if (sign_1 == "+" && sign_2 == "*")
 			{
-				return (int)(number_1 + number_2 * number_3);
+				decimal number_4 = number_2 * number_3;
+				decimal result = number_1 + number_4;
+				return result;
+				//return (int)(number_1 + number_2 * number_3);
 			}
 			else if (sign_1 == "+" && sign_2 == "/")
 			{
-				return (int)(double)(number_1 + number_2 / number_3);
-			}
+                decimal number_4 = number_2 / number_3;
+                decimal result = number_1 + number_4;
+                return result;
+                //return (int)(double)(number_1 + number_2 / number_3);
+            }
 			else if (sign_1 == "+" && sign_2 == "+")
 			{
-				return (int)(number_1 + number_2 + number_3);
-			}
+                return (number_1 + number_2 + number_3);
+            }
 			else if (sign_1 == "-" && sign_2 == "+")
 			{
-				return (int)(number_1 - number_2 + number_3);
-			}
+                decimal number_4 = number_2 + number_3;
+                decimal result = number_1 - number_4;
+                return result;
+                //return (int)(number_1 - number_2 + number_3);
+            }
 			else if (sign_1 == "-" && sign_2 == "-")
 			{
-				return (int)(number_1 - number_2 - number_3);
+				return (number_1 - number_2 - number_3);
 			}
 			else if (sign_1 == "-" && sign_2 == "*")
 			{
-				return (int)(number_1 - number_2 * number_3);
-			}
+                decimal number_4 = number_2 * number_3;
+                decimal result = number_1 - number_4;
+                return result;
+                //return (int)(number_1 - number_2 * number_3);
+            }
 			else if (sign_1 == "-" && sign_2 == "/")
 			{
-				return (number_1 - number_2 / number_3);
-			}
+                decimal number_4 = number_2 / number_3;
+                decimal result = number_1 - number_4;
+                return result;
+                //return (number_1 - number_2 / number_3);
+            }
 			else if (sign_1 == "*" && sign_2 == "+")
 			{
-				return (int)(number_1 * number_2 + number_3);
-			}
+                decimal number_4 = number_1 * number_2;
+                decimal result = number_4 + number_3;
+                return result;
+                //return (int)(number_1 * number_2 + number_3);
+            }
 			else if (sign_1 == "*" && sign_2 == "-")
 			{
-				return (int)(number_1 * number_2 - number_3);
-			}
+                decimal number_4 = number_1 * number_2;
+                decimal result = number_4 - number_3;
+                return result;
+                //return (int)(number_1 * number_2 - number_3);
+            }
 			else if (sign_1 == "*" && sign_2 == "*")
 			{
-				return (int)(number_1 * number_2 * number_3);
-			}
+                return (number_1 * number_2 * number_3);
+            }
 			else if (sign_1 == "*" && sign_2 == "/")
 			{
-				return (number_1 * number_2 / number_3);
-			}
+                decimal number_4 = number_1 * number_2;
+                decimal result = number_4 / number_3;
+                return result;
+                //return (number_1 * number_2 / number_3);
+            }
 			else if (sign_1 == "/" && sign_2 == "+")
 			{
-				return (number_1 / number_2 + number_3);
-			}
+                decimal number_4 = number_1 / number_2;
+                decimal result = number_4 + number_3;
+                return result;
+                //return (number_1 / number_2 + number_3);
+            }
 			else if (sign_1 == "/" && sign_2 == "-")
 			{
-				return (number_1 / number_2 - number_3);
-			}
+                decimal number_4 = number_1 / number_2;
+                decimal result = number_4 - number_3;
+                return result;
+                //return (number_1 / number_2 - number_3);
+            }
 			else if (sign_1 == "/" && sign_2 == "*")
 			{
-				return (number_1 / number_2 * number_3);
-			}
+                decimal number_4 = number_2 * number_3;
+                decimal result = number_1 / number_4;
+                return result;
+                //return (number_1 / number_2 * number_3);
+            }
 			else if (sign_1 == "/" && sign_2 == "/")
 			{
 				return (number_1 / number_2 / number_3);
