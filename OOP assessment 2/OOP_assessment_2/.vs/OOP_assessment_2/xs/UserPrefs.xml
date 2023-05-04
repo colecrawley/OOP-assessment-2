@@ -1,0 +1,33 @@
+﻿<Properties StartupConfiguration="{30310E91-C0D4-4134-8A70-F0E7408A389B}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.OOP__assessment__2 PreferredExecutionTarget="MonoDevelop.Default" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="OOP_assessment_2/Menu.cs">
+    <Files>
+      <File FileName="OOP_assessment_2/Program.cs" Line="10" Column="29" />
+      <File FileName="OOP_assessment_2/Menu.cs" Line="48" Column="100" />
+      <File FileName="OOP_assessment_2/Card.cs" Line="20" Column="57" />
+      <File FileName="OOP_assessment_2/Pack.cs" Line="114" Column="32" />
+      <File FileName="OOP_assessment_2/Number.cs" Line="17" Column="24" />
+      <File FileName="OOP_assessment_2/Deal3Cards.cs" Line="41" Column="51" />
+      <File FileName="OOP_assessment_2/equation.cs" Line="40" Column="50" />
+      <File FileName="OOP_assessment_2/Operator.cs" Line="16" Column="1" />
+      <File FileName="OOP_assessment_2/leaderboard.cs" Line="13" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="OOP_assessment_2" expanded="True">
+            <Node name="OOP_assessment_2" expanded="True">
+              <Node name="Menu.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>
